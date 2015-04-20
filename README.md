@@ -4,7 +4,7 @@ Create treemap images for user distributions in Zooniverse projects.
 
 ## Example for how to make a treemap in R for the Galaxy Zoo 2 users:
 
-1. Download counts of raw classifications from SQL table ```gz2_rawclicks```:
+* Download counts of raw classifications from SQL table ```gz2_rawclicks```:
 
 ```sql
 select id, classification_count from users
@@ -14,7 +14,7 @@ order by `classification_count`
 
 Save output to ```csv/gz2_users.csv```
 
-2. If the number of unique users is quite large (which makes visualizing it cumbersome), optionally select a random sub-sample of users with Python:
+* If the number of unique users is quite large (which makes visualizing it cumbersome), optionally select a random sub-sample of users with Python:
 
 ```python
 import asciitable,random
@@ -26,7 +26,7 @@ subsampled = random.sample(gz2users,n)
 asciitable.write(subsampled,'csv/ss5000.csv')
 ```
 
-3. Generate the treemap diagram using the ```treemap``` package in R and save to a PDF file: 
+* Generate the treemap diagram using the ```treemap``` package in R and save to a PDF file: 
 
 ```R
 ss<-read.table('csv/ss5000.csv')
