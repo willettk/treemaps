@@ -35,4 +35,4 @@ treemap(ss, index='id', vSize='size', palette='RdBu', lowerbound.cex.labels=1, t
 quartz.save('~/Dropbox/treemap/gz2_RdBu_5000.pdf',type='pdf')
 ```
 
-
+![GZ2 example treemap](https://raw.github.com/willettk/treemaps/master/images/gz2_example.png)
